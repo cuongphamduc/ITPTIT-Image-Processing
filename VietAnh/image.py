@@ -1,6 +1,5 @@
 import cv2
-img = cv2.imread("2.jpeg", 0)
-thresh = 100
-img_bw = cv2.threshold(img, thresh, 255, cv2.THRESH_BINARY)[1]
-cv2.imshow("aaa", img_bw)
+img = cv2.imread("2.jpeg")
+img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+cv2.imshow("gray image", img)
 cv2.waitKey(0)
