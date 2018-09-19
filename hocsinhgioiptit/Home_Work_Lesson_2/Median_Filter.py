@@ -8,6 +8,7 @@ for i in range(1, r - 1):
             temp = [0 * img[i - 1, j - 1, k] , 1 * img[i - 1, j, k] , 0 * img[i - 1, j + 1, k]
                                   , 1 * img[i, j - 1, k] , 4 * img[i, j, k] , 1 * img[i, j + 1, k]
                                   , 0 * img[i + 1, j - 1, k] , 1 * img[i + 1, j, k] , 0 * img[i + 1, j + 1, k]]
+	    temp.sort()
             img[i, j, k] = temp[4]
 cv2.imshow('origin', ori)
 cv2.imshow('image', img)
